@@ -140,10 +140,19 @@ body {
     opacity: 0.8;
 }
 
-.cta-button {
-    display: inline-block;
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cta-button, .resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 1rem 2rem;
-    background: var(--accent-color);
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
@@ -151,7 +160,17 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-button:hover {
+.cta-button {
+    background: var(--accent-color);
+}
+
+.resume-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.cta-button:hover, .resume-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
